@@ -1,0 +1,540 @@
+
+ul > li:nth-child(2){
+  color: #8000ff;
+}
+
+.section{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.section-header > h1{
+  font-size: 2.5rem;
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.section-header > h1 > a{
+  color: black;
+  text-decoration: none;
+}
+.blogs-stories{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  height: 50rem;
+  overflow: auto;
+}
+
+.emptyLatestStories{
+   position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  top: 0;
+}
+
+.add-button{
+  padding: 0.5rem 2rem;
+  border: none;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.add-button:hover{
+  background-color: #0056b3;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+  max-height: 70rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.edit-post{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  }
+
+
+.edit-modal-content{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 50%;
+  height: 40rem;
+  overflow-y: auto;
+}
+
+.close-edit{
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    font-size: 24px;
+    width: 3rem;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.edit-blog{
+  font-size: 30px;
+  height: 10%;
+}
+
+.edit-modal-content input, .edit-modal-content textarea{
+    width: 95%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 24px;
+  }
+
+  .edit-modal-content textarea{
+    height: 200px;
+    resize: none;
+  }
+
+  .save-edit{
+    padding: 0.7rem 2rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .sbt-btn:hover{
+    background-color: #0056b3;
+  }
+
+.edit-post.openEdit{
+  display: flex;
+}
+
+.user-info{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
+.user{
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.user-profile{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  row-gap: 5px;
+  width: 100%;
+  flex-direction: column;
+}
+
+.option-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.user-profile > a{
+  text-decoration: none;
+  color: black;
+}
+.user img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.option{
+  position: absolute;
+  right: 10px;
+  top: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.option-buttons{
+  display: none;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  border: 1px solid black;
+  padding: 0.2rem 0.5rem;
+  width: 50%;
+  height: 8rem;
+  background-color: black;
+  border-radius: 15px;
+  z-index: 99;
+}
+
+.openOption{
+  display: flex;
+}
+
+.edit, .delete{
+  column-gap: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 35%;
+  width: 100%;
+  font-size: 0.9rem;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+.edit:hover , .delete:hover{
+  border: 2px solid rgb(255, 252, 252);
+}
+
+.edit img, .delete img{
+  width: 30px;
+  height: 30px;
+}
+
+.option img{
+  width: 35px;
+  height: 10px;
+} 
+
+.article-img{
+  width: 100%;
+  height: 55%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.article-info{
+  height: 50%;
+}
+
+.article-title{
+  text-align: left;
+  width: 100%;
+  font-size: 2rem;
+}
+
+.article-subTitle{
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  margin: 10px;
+  color: #7b7474;
+}
+.article-description {
+  max-height: 14.2rem;
+  line-height: 2rem;
+  overflow: hidden;
+  text-align: justify;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  text-indent: 2rem;
+}
+
+.article-desc-wrapper{
+  overflow: hidden;
+}
+
+.article-description.expanded {
+  max-height: 100%;
+  overflow: visible;
+}
+
+
+.seeMore {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1rem;
+  border: none;
+}
+
+
+.interaction-buttons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+.share, .comment{
+  height: 100%;
+  width: 15%;
+  border-radius: 20px;
+  border: none;
+  background-color: #007BFF;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.likeBtn{
+  height: 100%;
+  width: 15%;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  }
+
+  .share:hover, .comment:hover,.like:hover{
+    transform: scale(1.05);
+  }
+  .likeBtn.liked{
+    border: none;
+    color: white;
+    background-color: #007BFF;
+  }
+
+  .modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .modal.show{
+    display: flex;
+  } 
+
+  .modal-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 50%;
+    height: 45rem;
+    overflow-y: auto;
+    position: relative;
+  }
+
+
+  .close-button{
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }   
+
+  .close-button:hover{
+    color: black;
+  }
+
+  #blogForm{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 90%;
+    width: 100%;
+    row-gap: 5px;
+  }
+
+  .modal-content label{
+    font-size: 24px;
+    align-self: flex-start;
+  }
+  .modal-content input, .modal-content textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+
+  .modal-content h2{
+    font-size:  2.5rem;
+  }
+  .modal-content textarea{
+    height: 170px;
+    resize: none;
+  }
+
+  .sbt-btn{
+    align-self: flex-end;
+    padding: 0.7rem 2rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .confirm-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+  }
+
+  .confirm-wrapper.showConfirm{
+    display: flex;
+  } 
+
+  .confirm-modal{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 30%;
+    height: 20rem;
+    overflow-y: auto;
+    position: relative;
+  }
+
+
+  .confirm-close{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 24px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }   
+
+
+  .confirm-text{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 2rem;
+    flex-direction: column;
+    height: 70%;
+  }
+
+.confirm-text1{
+  font-size: 3rem;
+}
+
+.confirm-text2{
+  text-align: center;
+  font-size: 1rem;
+}
+
+  .confirm-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .confirm-buttons button{
+    padding: 0.7rem 2rem;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+
+  
+  

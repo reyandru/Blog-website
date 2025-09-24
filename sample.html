@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Read Image File</title>
+</head>
+<body>
+  <input type="file" id="imageInput" accept="image/*" />
+  <br>
+  <img id="preview" src="" alt="Image Preview" style="max-width: 300px; display: block; margin-top: 10px;" />
+
+  <script>
+    const imageInput = document.getElementById('imageInput');
+    const preview = document.getElementById('preview');
+
+    imageInput.addEventListener('change', function () {
+      const file = this.files[0];
+
+      if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+          preview.src = e.target.result;  
+        };
+
+        reader.readAsDataURL(file); 
+      }
+    });
+  </script>
+</body>
+</html>

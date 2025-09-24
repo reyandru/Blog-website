@@ -1,0 +1,214 @@
+
+ul > li:nth-child(1){
+  color: #8000ff;
+}
+
+.section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.top-stories{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.section{
+  padding-block-end: 10px;
+}
+
+.articles{
+  display: flex;
+  gap: 1rem;
+  width: 50%;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+  height: 50rem;
+}
+
+.description{
+  display: flex;align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 50%;
+}
+
+.description > h1{
+  font-size: 2.5rem;
+  font-weight: 400;
+  font-family: 'Fjalla One', sans-serif;
+  width: 15%;
+}
+
+.description > h3{
+  font-size: 1.5rem;
+  font-style:  italic;
+  width: 80%;
+}
+
+.heads{
+  display: flex;
+  width: 90%;
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+
+}
+.trends{
+  color: #007BFF;
+}
+
+
+.main-article{
+  flex: 2;
+  height: 50rem;
+  position: relative;
+}
+
+.emptyMainArticle, .emptyStories{
+  position: absolute;
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  top: 0;
+}
+
+.article{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.main-article-img{
+  height: 35rem;
+  width: 100%;
+  object-fit: fill;
+}
+
+.main-article-title{
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.article-text{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.title-text{
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.main-article-subtitle{
+  color: #7b7474;
+}
+
+.post-link{
+  text-decoration: none;
+}
+
+.main-article-description{
+  text-indent: 1rem;
+  font-size: 1.3rem;
+  color: #555;
+  line-height:2rem;
+}
+
+.article-link{
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-article-link:hover , .article-link:hover, .story-link:hover{
+  text-decoration: underline black;
+  color: inherit;
+  cursor: pointer;
+}
+
+.article-img{
+  height: 250px;
+  object-fit: fill;
+}
+
+.article-description{
+  font-size: 1rem;
+  color: #555;
+  line-height:1.6rem;
+  overflow: hidden;
+}
+
+.top-stories{
+  padding: 10px;
+}
+
+.top-stories > h1{
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'Arial', sans-serif;
+  margin-bottom: 1rem;
+  text-align: left;
+  width:95%;
+}
+
+.stories{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 75rem;
+  overflow: auto;
+  position: relative;
+}
+
+.story-text{
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.story-title{
+  font-size: 2rem;
+}
+
+.story-subtitle{
+  font-size: 1rem;
+  color: #7b7474;
+}
+
+.story{
+  display: flex;
+}
+
+.story-wrapper{
+  gap: 0.5rem;
+  width: 95%;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: black;
+  height: 12rem;
+  box-shadow: 1px 1px 10px 1px grey;
+}
+
+.story-img{
+  height: 12rem;
+  width: 20rem;
+  object-fit: fill;
+}
+

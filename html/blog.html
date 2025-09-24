@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/blog.css">
+  <link rel="stylesheet" href="../css/headerFooter.css">
+  
+</head>
+<body>
+   <img src="../assets/hero.png" alt="" class="hero-img">
+  <header>
+    <ul class="nav-links">
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="blog.html">BLOGS</a></li>
+    <li><a href="players.html">PLAYERS</a></li>
+    <li><a href="teams.html">TEAMS</a></li>
+    <li><a href="about.html">ABOUT</a></li>
+    <li><a href="#footer">CONTACT</a></li>
+  </ul>
+   <div class="search-input">
+    <input type="text" placeholder="">
+    <span>Search</span>
+    <button class="search-button">Go</button>
+  </div>
+  </header>
+
+  <section class="section" id="section">
+    <div class="section-header">
+    <span> </span>
+    <h1><a href="#section">Latest stories</a></h1>
+    <button class="add-button" id="addBtn">ADD</button>
+    </div>
+
+    <div class="blogs-stories" id="blogStory">
+
+
+
+    </div>
+      
+    </div>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <button class="close-button" id="closeModalBtn">X</button>
+          <h2>Add New Blog Post</h2>
+          <form id="blogForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="subTitle">Sub Title:</label>
+            <input type="text" id="subtitle" name="subTitle" required>
+
+            <label for="imageUrl">Image URL:</label>
+            <input type="file" id="imageUrl" name="imageUrl" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit" class="sbt-btn" id="submitPost">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="edit-post" id="editPos">
+    <div class="edit-modal-content">
+      <button class="close-edit" id="closeEditBtn">X</button>
+      <h2 class="edit-blog">Edit Blog</h2>
+      <form action="">
+          <input type="file" id="changeImg">	
+
+
+        <label for="title">Title:
+          <input type="text" id="editTitle" name="title" required>
+        </label>
+
+         <label for="title">Sub Title:
+          <input type="text" id="editSubTitle" name="title" required>
+        </label>
+
+        <label for="description">Description:
+          <textarea id="editDescription" name="description" rows="4" required></textarea>
+        </label>
+
+        <button type="submit" class="save-edit" id="saveEdit">Save</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="confirm-wrapper" id="confirmWrapper">
+    <div class="confirm-modal">
+      <button class="confirm-close" id="confirmClose">x</button>
+      <div class="confirm-text">
+        <h1 class="confirm-text1">Are you sure?</h1>
+      <h3 class="confirm-text2">Are you sure to delete this blog?</h3>
+      </div>
+
+      <div class="confirm-buttons">
+        <button class="no-cancel" id="noBtn">No, cancel</button>
+        <button class="yes-cancel" id="yesBtn">Yes, confirm</button>
+      </div>
+    </div>
+  </div>
+  </section>
+
+  
+
+   <footer id="footer">
+    <div class="top-footer">
+      <img src="../assets/nba-bg.jpg" alt="" class="footer-bg">
+      <div class="footer-links">
+        <a href="https://www.facebook.com/REYANDRUBARIATA/" target="_blank"><img src="../assets/fb.png" alt="">Rei Andrew Bariata</a>
+        <a href="#  " target="_blank"><img src="../assets/email.png" alt="">bariatareiandrew@gmail.com</a>
+        <a href="https://github.com/reyandru" target="_blank"><img src="../assets/hub.png" alt="">reyandru</a>
+        <a href="https://www.linkedin.com/in/rei-andrew-bariata-563512361/" target="_blank"><img src="../assets/linked.png" alt="">Rei Andrew Bariata</a>
+      </div>
+    </div>
+    <div class="bottom-footer">
+      <h3>Copyright &copy; 2024 NBA Blog</h3>
+      <h3>All rights reserved</h3>
+      <h3>Designed by Rei Andrew Bariata</h3>
+    </div>
+  </footer>
+  <script src="../javascript/blog.js"></script>
+</body>
+</html>
